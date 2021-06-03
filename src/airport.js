@@ -12,4 +12,8 @@ class Airport {
   clearForLanding(plane) {
     this._hangar.push(plane);
   };
+
+  clearForTakeOff(plane) {
+    this._hangar = [];
+  }
 };
