@@ -2,7 +2,7 @@
 
 class Plane {
   constructor() {
-    this.__location;
+    this._location;
   }
 
   land(airport) {
@@ -13,5 +13,4 @@ class Plane {
   takeoff() {
     this._location.clearForTakeOff()
   };
-
 }

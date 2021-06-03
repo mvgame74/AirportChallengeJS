@@ -8,5 +8,4 @@ class Weather {
   isStormy() {
     return (Math.random() > this._CHANCE_OF_STORMY);
   };
-
 };

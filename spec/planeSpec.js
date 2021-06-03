@@ -15,7 +15,7 @@ describe('Plane', () => {
     expect(airport.clearForLanding).toHaveBeenCalledWith(plane)
   });
 
-  it('can takeoff from and airport', () => {
+  it('can takeoff from an airport', () => {
     plane.land(airport);
     plane.takeoff();
     expect(airport.clearForTakeOff).toHaveBeenCalled();

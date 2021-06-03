@@ -8,7 +8,7 @@ describe('Feature Test:', () => {
     airport = new Airport();
   });
 
-  describe('under non-stormy conditions', () => {
+  describe('under normal conditions', () => {
 
     beforeEach(() => {
       spyOn(Math, 'random').and.returnValue(0);
