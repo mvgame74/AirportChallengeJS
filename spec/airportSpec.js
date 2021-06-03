@@ -1,6 +1,7 @@
 'use strict';
 
 describe('Airport', () => {
+
   let airport;
   let plane;
   let weather;
@@ -15,7 +16,7 @@ describe('Airport', () => {
     expect(airport.planes()).toEqual([]);
   });
 
-  describe('under normal conditions',() => {
+  describe('under non-stormy conditions', () => {
 
     beforeEach(() => {
       weather.isStormy.and.returnValue(false);
@@ -33,16 +34,16 @@ describe('Airport', () => {
     });
   });
 
-  describe('under stormy conditions',() => {
+  describe('under stormy conditions', () => {
 
     beforeEach(() => {
       weather.isStormy.and.returnValue(true);
     });
 
-    it('does not clear planes for landing', () => {
+    it('does not clear planes for takeoff', () => {
       expect(() => { airport.clearForLanding(plane); }).toThrowError('cannot land during storm');
     });
-    
+
     it('does not clear planes for takeoff', () => {
       expect(() => { airport.clearForTakeOff(plane); }).toThrowError('cannot takeoff during storm');
     });
